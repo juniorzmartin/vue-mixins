@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Lista Filmes</h3>
+        <h3>{{titulo}}</h3>
         <input type="text" placeholder="Nome do filme" v-model="item">
         <button type="button" @click="adicionarItem">Adicionar</button>
         <br>
@@ -18,6 +18,12 @@ import ListaMixin from "@/mixins/ListaMixin"
 import RemoverItemListaMixin from "@/mixins/RemoverItemListaMixin"
 export default {
     name: 'ListaFilmes',
-    mixins: [ListaMixin, RemoverItemListaMixin]
+    data: () => ({
+        titulo: 'Sobrepondo o mixin(ListaFilme)'
+    }),
+    mixins: [ListaMixin, RemoverItemListaMixin],
+    created() {
+        console.log('listaFilmes Criado')
+    }
 }
 </script>

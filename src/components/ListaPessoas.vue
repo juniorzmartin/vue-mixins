@@ -18,6 +18,9 @@ import ListaMixin from '@/mixins/ListaMixin'
 import RemoverItemListaMixin from "@/mixins/RemoverItemListaMixin"
 export default {
     name: 'ListaPessoas',
-    mixins: [ListaMixin,RemoverItemListaMixin]
+    mixins: [ListaMixin,RemoverItemListaMixin],
+        created() {
+        console.log('listaPessoas Criado')
+    }
 }
 </script>
