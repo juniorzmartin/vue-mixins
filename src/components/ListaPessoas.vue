@@ -9,13 +9,15 @@
                 {{item}}
             </li>
         </ul>
+        <button type="button" @click="removerItem">remover</button>
     </div>
 </template>
 
 <script>
 import ListaMixin from '@/mixins/ListaMixin'
+import RemoverItemListaMixin from "@/mixins/RemoverItemListaMixin"
 export default {
     name: 'ListaPessoas',
-    mixins: [ListaMixin]
+    mixins: [ListaMixin,RemoverItemListaMixin]
 }
 </script>
